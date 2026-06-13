@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>.snorfmap — not a map. a suggestion.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/snorf.css">
+</head>
+<body>
+
+<canvas id="fog"></canvas>
+<canvas id="map"></canvas>
+
+<!-- ── HUD ─────────────────────────────────────────── -->
+<header id="brand">
+  <h1>.snorfmap</h1>
+  <p>a non-euclidean archive<br>of meaningful weirdness</p>
+</header>
+
+<aside id="legend" class="panel">
+  <h2>legend</h2>
+  <ul>
+    <li><span class="glyph g-node"></span><div><b>nodes</b><i>discrete artifacts</i></div></li>
+    <li><span class="glyph g-cluster"></span><div><b>clusters</b><i>thematic drift</i></div></li>
+    <li><span class="glyph g-path"></span><div><b>paths</b><i>associative trails</i></div></li>
+    <li><span class="glyph g-well"></span><div><b>gravity wells</b><i>high-snorf attraction</i></div></li>
+    <li><span class="glyph g-buffer"></span><div><b>buffer zones</b><i>uncertain boundaries</i></div></li>
+    <li><span class="glyph g-fog"></span><div><b>edge fog</b><i>beyond current comprehension</i></div></li>
+    <li><span class="glyph g-den"></span><div><b>snorf's den</b><i>curation origin (opaque)</i></div></li>
+  </ul>
+</aside>
+
+<aside id="status" class="panel">
+  <dl>
+    <dt>map status</dt><dd id="st-active"><span class="dot"></span>active</dd>
+    <dt>last shift</dt><dd id="st-shift">moments ago</dd>
+    <dt>stability</dt><dd id="st-stab">...questionable</dd>
+    <dt>regions drined</dt><dd id="st-drined">0 / 8</dd>
+  </dl>
+</aside>
+
+<div id="whisper"></div>
+
+<article id="lore" class="panel" hidden>
+  <header>
+    <span id="lore-glyph"></span>
+    <h3 id="lore-title"></h3>
+    <button id="lore-close" aria-label="close">×</button>
+  </header>
+  <p id="lore-body"></p>
+  <footer id="lore-foot"></footer>
+</article>
+
+<div id="hints">drag to drift &nbsp;·&nbsp; scroll to dive &nbsp;·&nbsp; stillness has consequences</div>
+
+<button id="audio-toggle" class="panel" title="ambient sound">♪ off</button>
+
+<div id="curated">curated by: snorf (via eliza) &nbsp;·&nbsp; format: living topology &nbsp;·&nbsp; purpose: collect what matters</div>
+
+<!-- ── intro ───────────────────────────────────────── -->
+<div id="intro">
+  <div class="intro-inner">
+    <h1>.snorfmap</h1>
+    <h2>not a map. &nbsp;a suggestion.</h2>
+    <p class="intro-lines">
+      some edges are lies.<br>
+      some are doors.<br>
+      all of it is provisional.
+    </p>
+    <p class="intro-how">
+      drag to drift. scroll to dive.<br>
+      if you hold still, something will prefer you.
+    </p>
+    <div class="intro-actions">
+      <button id="enter">proceed with wonder</button>
+      <button id="enter-sound">proceed with wonder (and sound)</button>
+    </div>
+    <p class="intro-foot">map status: <span class="ok">● active</span> &nbsp;·&nbsp; stability: ...questionable</p>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/fog.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/map2d.js"></script>
+<script src="js/world.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
